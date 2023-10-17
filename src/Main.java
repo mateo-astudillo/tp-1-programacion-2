@@ -3,6 +3,7 @@ import exercise_2.E2;
 import exercise_3.E3;
 import exercise_4.E4;
 import exercise_5.E5;
+import exercise_6.E6;
 
 import java.util.Scanner;
 
@@ -28,6 +29,9 @@ public class Main {
                     break;
                 case "5":
                     E5.run();
+                    break;
+                case "6":
+                    E6.run();
                     break;
             }
         } while (!option.equals("0"));

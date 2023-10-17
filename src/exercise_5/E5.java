@@ -8,7 +8,7 @@ public class E5 {
         int number;
         System.out.print("Ingrese un número: ");
         number = scanner.nextInt();
-        while (true) {
+        while (number > 0) {
             number -= 1;
             if (isPrime(number)) {
                 System.out.println("Número primo anterior: " + number);
@@ -21,7 +21,7 @@ public class E5 {
         int rest = 1;
         int n = 2;
         while ( (n < number / 2) && (rest != 0)) {
-            rest = (int) (number % n);
+            rest = number % n;
             n++;
         }
         return rest != 0;

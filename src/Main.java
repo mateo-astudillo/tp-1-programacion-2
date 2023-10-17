@@ -1,4 +1,5 @@
 import exercise_1.E1;
+import exercise_16.E16;
 import exercise_2.E2;
 import exercise_3.E3;
 import exercise_4.E4;
@@ -33,6 +34,9 @@ public class Main {
                 case "6":
                     E6.run();
                     break;
+                case "16":
+                    E16.run();
+                    break;
             }
         } while (!option.equals("0"));
         scanner.close();
@@ -47,6 +51,7 @@ public class Main {
                 "4 - Ejercicio 4",
                 "5 - Ejercicio 5",
                 "6 - Ejercicio 6",
+                /*
                 "7 - Ejercicio 7",
                 "8 - Ejercicio 8",
                 "9 - Ejercicio 9",
@@ -56,9 +61,10 @@ public class Main {
                 "13 - Ejercicio 13",
                 "14 - Ejercicio 14",
                 "15 - Ejercicio 15",
+                 */
                 "16 - Ejercicio 16",
-                "17 - Ejercicio 17",
-                "18 - Ejercicio 18",
+                //"17 - Ejercicio 17",
+                //"18 - Ejercicio 18",
         };
         for (String s : exercises) {
             System.out.println(s);

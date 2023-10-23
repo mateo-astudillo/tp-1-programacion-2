@@ -28,7 +28,6 @@ public class E4 {
                 "\nIMC: " + p.bodyMassIndex() +
                 "\n-----------------------------------" +
                 "\n>> " + p.bodyMassIndexDescription()
-
         );
 
     }

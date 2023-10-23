@@ -4,6 +4,7 @@ import exercise_3.E3;
 import exercise_4.E4;
 import exercise_5.E5;
 import exercise_6.E6;
+import exercise_7.E7;
 import exercise_16.E16;
 import exercise_17.E17;
 
@@ -35,6 +36,9 @@ public class Main {
                 case "6":
                     E6.run();
                     break;
+                case "7":
+                    E7.run();
+                    break;
                 case "16":
                     E16.run();
                     break;
@@ -55,8 +59,8 @@ public class Main {
                 "4 - Ejercicio 4",
                 "5 - Ejercicio 5",
                 "6 - Ejercicio 6",
-                /*
                 "7 - Ejercicio 7",
+                /*
                 "8 - Ejercicio 8",
                 "9 - Ejercicio 9",
                 "10 - Ejercicio 10",

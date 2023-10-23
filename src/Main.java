@@ -7,6 +7,7 @@ import exercise_6.E6;
 import exercise_7.E7;
 import exercise_16.E16;
 import exercise_17.E17;
+import exercise_18.E18;
 
 import java.util.Scanner;
 
@@ -45,6 +46,9 @@ public class Main {
                 case "17":
                     E17.run();
                     break;
+                case "18":
+                    E18.run();
+                    break;
             }
         } while (!option.equals("0"));
         scanner.close();
@@ -72,7 +76,7 @@ public class Main {
                  */
                 "16 - Ejercicio 16",
                 "17 - Ejercicio 17",
-                //"18 - Ejercicio 18",
+                "18 - Ejercicio 18",
         };
         for (String s : exercises) {
             System.out.println(s);

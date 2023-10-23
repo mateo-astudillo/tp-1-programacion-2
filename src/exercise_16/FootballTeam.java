@@ -25,9 +25,9 @@ public class FootballTeam {
         String starter;
         Player p = new Player();
         System.out.print("Nombre del jugador: ");
-        p.setName(scanner.nextLine());
+        p.setFirstName(scanner.nextLine());
         System.out.print("Apellido del jugador: ");
-        p.setSurname(scanner.nextLine());
+        p.setLastName(scanner.nextLine());
         System.out.print("Edad del jugador: ");
         p.setAge(scanner.nextInt());
         System.out.print("¿Es titular? (s - n):");

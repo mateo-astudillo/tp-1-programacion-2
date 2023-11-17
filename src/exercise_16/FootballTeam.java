@@ -1,45 +1,75 @@
 package exercise_16;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class FootballTeam {
     private String name;
     private String country;
-    private TechnicalDirector technicalDirector;
-    private GoalKeeper goalkeeper; // 1
-    private Defender[] defenders; // 4
-    private Midfielder[] midfielders; // 4
-    private Forward[] forwards; // 2
+    private Goalkeeper goalkeeper;
+    private final Defender[] defenders;
+    private final Midfielder[] midfielders;
+    private final Forward[] forwards;
+    private final ArrayList<Player> substitutes;
 
     public FootballTeam(String name, String country) {
         this.setName(name);
         this.setCountry(country);
-        this.technicalDirector = new TechnicalDirector();
+        this.goalkeeper = new Goalkeeper();
         this.defenders = new Defender[4];
         this.midfielders = new Midfielder[4];
         this.forwards = new Forward[2];
+        this.substitutes = new ArrayList<Player>();
     }
 
-    public void addPlayer() {
-        Scanner scanner = new Scanner(System.in);
-        String starter;
-        Player p = new Player();
-        System.out.print("Nombre del jugador: ");
-        p.setFirstName(scanner.nextLine());
-        System.out.print("Apellido del jugador: ");
-        p.setLastName(scanner.nextLine());
-        System.out.print("Edad del jugador: ");
-        p.setAge(scanner.nextInt());
-        System.out.print("¿Es titular? (s - n):");
-        starter = scanner.nextLine();
-        p.setStarter(starter.equals("s"));
-        String options =
-                "1 - Arquero\n" +
-                "2 - Defensor\n" +
-                "3 - Mediocampista\n" +
-                "4 - Delantero\n";
+    public void addGoalkeeper(Goalkeeper goalkeeper) {
+        if (!(this.goalkeeper == null)) {
+            this.goalkeeper = goalkeeper;
+        }
+        goalkeeper.setStarter(false);
+        this.substitutes.add(goalkeeper);
     }
 
+    public void addDefender(Defender defender) {
+        int counter = 0;
+        for (Defender d : this.defenders) {
+            if (d.isStarter())
+                counter += 1;
+            if (counter >= d.max) {
+                defender.setStarter(false);
+                this.substitutes.add(defender);
+                return;
+            }
+        }
+        this.defenders[counter] = defender;
+    }
+
+    public void addMidfielder(Midfielder midfielder) {
+        int counter = 0;
+        for (Midfielder m : this.midfielders) {
+            if (m.isStarter())
+                counter += 1;
+            if (counter >= m.max) {
+                midfielder.setStarter(false);
+                this.substitutes.add(midfielder);
+                return;
+            }
+        }
+        this.midfielders[counter] = midfielder;
+    }
+
+    public void addForwards(Forward forward) {
+        int counter = 0;
+        for (Forward f : this.forwards) {
+            if (f.isStarter())
+                counter += 1;
+            if (counter >= f.max) {
+                forward.setStarter(false);
+                this.substitutes.add(forward);
+                return;
+            }
+        }
+        this.forwards[counter] = forward;
+    }
     public String getName() {
         return name;
     }

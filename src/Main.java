@@ -5,6 +5,7 @@ import exercise_4.E4;
 import exercise_5.E5;
 import exercise_6.E6;
 import exercise_7.E7;
+import exercise_8.E8;
 import exercise_16.E16;
 import exercise_17.E17;
 import exercise_18.E18;
@@ -39,6 +40,9 @@ public class Main {
                     break;
                 case "7":
                     E7.run();
+                    break;
+                case "8":
+                    E8.run();
                     break;
                 case "16":
                     E16.run();

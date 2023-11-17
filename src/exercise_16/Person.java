@@ -1,14 +1,13 @@
 package exercise_16;
 
-public class Person {
+public abstract class Person {
     private String firstName;
     private String lastName;
     private int age;
 
-    public String info() {
-        return "Nombre: " + this.getFirstName() +
-               "\nApellido: " + this.getLastName() +
-               "\nEdad: " + this.getAge();
+    @Override
+    public String toString() {
+        return this.getFirstName() + " " + this.getLastName() + ", " + this.getAge();
     }
     public String getFirstName() {
         return firstName;

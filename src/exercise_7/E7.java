@@ -16,8 +16,10 @@ public class E7 {
             position = scanner.nextInt();
             scanner.nextLine();
 
-            if (position <= 0) {
+            if (position < 0) {
                 System.out.println("Fin");
+            } else if (position == 0) {
+                System.out.println("Posición no valida");
             } else {
                 if (letter == secret_phrase.charAt(position - 1)) {
                     System.out.println("Adivinaste la letra y su posición, felicidades");
@@ -25,6 +27,6 @@ public class E7 {
                     System.out.println("Mala suerte, la próxima será...");
                 }
             }
-        } while (position > 0);
+        } while (position >= 0);
     }
 }

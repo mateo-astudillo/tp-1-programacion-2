@@ -1,19 +1,19 @@
 package exercise_16;
 
-public class Midfielder extends Player implements Printable {
-    private int numberOfAssists;
+public class Midfielder extends Player {
+    public final int max = 4;
+    private int assists;
+
+    public int getAssists() {
+        return assists;
+    }
+
+    public void setAssists(int assists) {
+        this.assists = assists;
+    }
 
     @Override
-    public void printInfo() {
-        String info = super.info();
-        System.out.println(info + "\nNúmero de asistencias: " + this.getNumberOfAssists());
-    }
-
-    public int getNumberOfAssists() {
-        return numberOfAssists;
-    }
-
-    public void setNumberOfAssists(int numberOfAssists) {
-        this.numberOfAssists = numberOfAssists;
+    public String toString() {
+        return super.toString() + "\nAsistencias: " + this.getAssists();
     }
 }

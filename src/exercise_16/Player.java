@@ -1,18 +1,7 @@
 package exercise_16;
 
-public class Player extends Person {
+public abstract class Player extends Person {
     private boolean starter;
-
-    public String info() {
-        String info = super.info();
-        if (this.isStarter()) {
-            info += "\nTitular";
-        }
-        else {
-            info += "\nSuplente";
-        }
-        return info;
-    }
 
     public boolean isStarter() {
         return starter;
@@ -20,5 +9,11 @@ public class Player extends Person {
 
     public void setStarter(boolean starter) {
         this.starter = starter;
+    }
+
+    @Override
+    public String toString() {
+        String starter = (this.starter) ? "titular" : "suplente";
+        return this.getFirstName() + " " + this.getLastName() + ", " + this.getAge() + "\n" + starter;
     }
 }

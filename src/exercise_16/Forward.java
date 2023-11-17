@@ -1,7 +1,6 @@
 package exercise_16;
 
 public class Forward extends Player {
-    public final int max = 2;
     private int goalsScored;
 
     public int getGoalsScored() {

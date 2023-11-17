@@ -3,7 +3,7 @@ package exercise_5;
 import java.util.Scanner;
 
 public class E5 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number;
         System.out.print("Ingrese un número: ");

@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
 public class E1 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AtomicIntegerArray qualification;
         qualification = new AtomicIntegerArray(new int[4]);

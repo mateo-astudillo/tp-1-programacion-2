@@ -3,7 +3,7 @@ package exercise_4;
 import java.util.Scanner;
 
 public class E4 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Patient p = new Patient();
         System.out.print("Ingrese el nombre del paciente: ");

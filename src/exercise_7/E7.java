@@ -3,7 +3,7 @@ package exercise_7;
 import java.util.Scanner;
 
 public class E7 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String secret_phrase = "programacion orientada a objetos"; // La letra 'p' es la posición número 1
         char letter;

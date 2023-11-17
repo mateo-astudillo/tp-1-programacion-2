@@ -3,7 +3,7 @@ package exercise_18;
 import java.util.Scanner;
 
 public class E18 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Team team;
         Programmer programmer;

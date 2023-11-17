@@ -3,7 +3,7 @@ package exercise_3;
 import java.util.Scanner;
 
 public class E3 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = 0;
         int nn = 1;

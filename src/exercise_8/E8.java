@@ -1,10 +1,9 @@
 package exercise_8;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class E8 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String date;
         MyDate myDate = new MyDate();

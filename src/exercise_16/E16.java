@@ -3,7 +3,7 @@ package exercise_16;
 import java.util.Scanner;
 
 public class E16 {
-    public static void run() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         FootballTeam footballTeam;
         String name, country;

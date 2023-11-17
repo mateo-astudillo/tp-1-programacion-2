@@ -3,7 +3,7 @@ package exercise_6;
 import java.util.Scanner;
 
 public class E6 {
-    public static void run() {
+    public static void main(String[] args) {
        Scanner scanner = new Scanner(System.in);
        String option;
        float radius;
